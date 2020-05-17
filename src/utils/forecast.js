@@ -18,7 +18,9 @@ const forecast = (pLat, pLong, pCallback) => {
         sum +
         " It's currently " +
         body.currently.temperature +
-        " degrees outside. There is a " +
+        " degrees outside. The high today is " + body.daily.data[0].temperatureHigh
+        +"The low today is " + body.daily.data[0].temperatureLow+
+       ". There is a " +
         body.currently.precipProbability +
         " % chance of rain.";
       pCallback(undefined, responseString);
