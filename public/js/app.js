@@ -9,7 +9,7 @@ const onSubmit = (e) => {
 };
 
 const getWeather = (address) => {
-  const query = "http://localhost:3000/weather?address=" + address;
+  const query = "/weather?address=" + address;
   fetch(query).then((response) => {
     response.json().then((data) => {
       if (data.error) {
